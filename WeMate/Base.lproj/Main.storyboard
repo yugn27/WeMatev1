@@ -50,7 +50,7 @@
         <!--Login-->
         <scene sceneID="KDZ-tB-aPL">
             <objects>
-                <viewController title="Login" id="rNs-yj-QAa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rNs-yj-QAa" customClass="Login" customModule="WeMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6sm-74-ziR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="815.625" y="132.04225352112675"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration-->
         <scene sceneID="r5O-Of-QGI">
             <objects>
-                <viewController id="LDE-Ye-7oZ" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="LDE-Ye-7oZ" customClass="registration" customModule="WeMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vgd-y3-Rgj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
