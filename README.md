@@ -1,4 +1,4 @@
-# [ownCloud] iOS app
+# [WeMate] iOS app
 
 ## Join development!
 
