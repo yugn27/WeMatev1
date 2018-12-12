@@ -18,34 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDR-4W-hDz">
-                                <rect key="frame" x="1" y="407" width="318" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="epr-eO-UOl"/>
-                                </constraints>
-                                <state key="normal" image="SignUpButton"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKc-1X-F2Q" customClass="Button" customModule="WeMate" customModuleProvider="target">
+                                <rect key="frame" x="24" y="468" width="272" height="30"/>
+                                <color key="backgroundColor" red="0.63079331699999996" green="0.40440522870000001" blue="0.7845288212" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGa-pD-SIw">
-                                <rect key="frame" x="1" y="331" width="318" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="Lno-PC-8E3"/>
-                                </constraints>
-                                <state key="normal" image="LoginButton"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hO-U5-W9H" customClass="Button" customModule="WeMate" customModuleProvider="target">
+                                <rect key="frame" x="24" y="392" width="272" height="30"/>
+                                <color key="backgroundColor" red="0.35619897119999999" green="0.37547034899999998" blue="0.62360346499999997" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="XDR-4W-hDz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GGf-dc-gD6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XDR-4W-hDz" secondAttribute="bottom" constant="103" id="IYe-ir-d4V"/>
-                            <constraint firstItem="XDR-4W-hDz" firstAttribute="leading" secondItem="sGa-pD-SIw" secondAttribute="leading" id="XIO-lh-Cq0"/>
-                            <constraint firstItem="XDR-4W-hDz" firstAttribute="top" secondItem="sGa-pD-SIw" secondAttribute="bottom" constant="18" id="x4s-Dr-VWR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UKc-1X-F2Q" secondAttribute="bottom" constant="70" id="6OZ-4A-6Bk"/>
+                            <constraint firstItem="UKc-1X-F2Q" firstAttribute="top" secondItem="1hO-U5-W9H" secondAttribute="bottom" constant="46" id="7Yx-Bu-NEF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1hO-U5-W9H" secondAttribute="trailing" constant="24" id="PC1-7g-gWE"/>
+                            <constraint firstItem="UKc-1X-F2Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="pgt-lm-cuI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UKc-1X-F2Q" secondAttribute="trailing" constant="24" id="ykf-QO-Uis"/>
+                            <constraint firstItem="1hO-U5-W9H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="z0F-6O-Eyf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+            <point key="canvasLocation" x="131.25" y="133.09859154929578"/>
         </scene>
         <!--Login-->
         <scene sceneID="KDZ-tB-aPL">
@@ -157,8 +169,4 @@
             <point key="canvasLocation" x="1464" y="130"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LoginButton" width="318" height="58"/>
-        <image name="SignUpButton" width="318" height="58"/>
-    </resources>
 </document>

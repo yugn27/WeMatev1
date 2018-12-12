@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CA1F3BC21C198B6006933FF /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F3BB21C198B6006933FF /* Button.swift */; };
 		D0041EF821C19592007EB7DC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0041EF721C19592007EB7DC /* Login.swift */; };
 		D0041EFA21C19687007EB7DC /* registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0041EF921C19687007EB7DC /* registration.swift */; };
 		FD3CFB7D21C154E80093BC39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CFB7C21C154E80093BC39 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9CA1F3BB21C198B6006933FF /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		D0041EF721C19592007EB7DC /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		D0041EF921C19687007EB7DC /* registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registration.swift; sourceTree = "<group>"; };
 		FD3CFB7921C154E80093BC39 /* WeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,7 @@
 			children = (
 				FD3CFB7C21C154E80093BC39 /* AppDelegate.swift */,
 				FD3CFB7E21C154E80093BC39 /* ViewController.swift */,
+				9CA1F3BB21C198B6006933FF /* Button.swift */,
 				FD3CFB8021C154E80093BC39 /* Main.storyboard */,
 				FD3CFB8321C154E90093BC39 /* Assets.xcassets */,
 				FD3CFB8521C154E90093BC39 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA1F3BC21C198B6006933FF /* Button.swift in Sources */,
 				D0041EFA21C19687007EB7DC /* registration.swift in Sources */,
 				D0041EF821C19592007EB7DC /* Login.swift in Sources */,
 				FD3CFB7F21C154E80093BC39 /* ViewController.swift in Sources */,
