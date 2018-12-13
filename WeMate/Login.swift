@@ -7,15 +7,50 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class Login: UIViewController {
 
+    @IBOutlet weak var emaitxt: UITextField!
+    @IBOutlet weak var passwordtxt: UITextField!
+    @IBAction func loginbtn(_ sender: UIButton) {
+        
+        Auth.auth().signIn(withEmail: emaitxt.text!, password: passwordtxt.text!) { user, error in
+            if error == nil && user != nil {
+                self.dismiss(animated: false, completion: nil)
+                print("Successful")
+               
+               
+                
+                self.myalert("Success", "login successful")
+                
+            } else {
+                print("Error logging in: \(error!.localizedDescription)")
+                self.myalert("Failed", "Incorrect Email ID or Password")
+            }
+        }
+         self.clear()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    func clear()
+    {
+        emaitxt.text = ""
+        passwordtxt.text = ""
+    }
+    
+    func myalert(_ mytitle:String, _ mymessage:String)
+    {
+        let alert = UIAlertController(title: mytitle, message: mymessage, preferredStyle: .actionSheet)
+        let ok = UIAlertAction(title: "Done", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert,animated: true,completion: nil)
+    }
 
     /*
     // MARK: - Navigation
