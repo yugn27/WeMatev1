@@ -85,18 +85,13 @@ class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if(ref == 5)
         {
             try! Auth.auth().signOut()
-            if let storyboard = self.storyboard {
+            if self.storyboard != nil {
                //
                 let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as?
                 ViewController
                 self.navigationController?.pushViewController(VC!, animated: true)
                 
             }
-            
-            //let VC = self.storyboard?.instantiateViewController(withIdentifier: "LogOut") as?
-            //Addreminder
-            //self.navigationController?.pushViewController(VC!, animated: true)
-            
         }
     }
 
