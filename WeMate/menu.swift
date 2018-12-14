@@ -10,7 +10,8 @@ import UIKit
 
 class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var count : Int = 0
-    let items = ["App Budget","Create list","View List","Add Reminder"]
+    var ref: Int = 0
+    let items = ["Add Budget","Create list","View List","Add Reminder"]
     @IBOutlet weak var tbview: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -41,6 +42,24 @@ class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         {
             menuview.isHidden = false
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ref = indexPath.row
+        
+        if(ref == 0)
+        {
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "Appbudget") as? Appbudget
+            self.navigationController?.pushViewController(VC!, animated: true)
+            
+        }
+        if(ref == 1)
+        {
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "Createlist") as?
+            Createlist
+            self.navigationController?.pushViewController(VC!, animated: true)
+            
+        }
+       
     }
 
     
