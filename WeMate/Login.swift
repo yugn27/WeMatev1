@@ -20,10 +20,13 @@ class Login: UIViewController {
             if error == nil && user != nil {
                 self.dismiss(animated: false, completion: nil)
                 print("Successful")
+   
                
-               
-                
+                let regView = self.storyboard?.instantiateViewController(withIdentifier: "menu") as? menu
+                self.navigationController?.pushViewController(regView!, animated: true)
                 self.myalert("Success", "login successful")
+              
+                
                 
             } else {
                 print("Error logging in: \(error!.localizedDescription)")
