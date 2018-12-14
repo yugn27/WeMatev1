@@ -24,7 +24,7 @@ class Login: UIViewController {
                
                 let regView = self.storyboard?.instantiateViewController(withIdentifier: "menu") as? menu
                 self.navigationController?.pushViewController(regView!, animated: true)
-                self.myalert("Success", "login successful")
+                self.myalert("Success", "Login Successful")
               
                 
                 
