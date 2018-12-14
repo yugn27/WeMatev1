@@ -13,6 +13,8 @@
 		D0041EF821C19592007EB7DC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0041EF721C19592007EB7DC /* Login.swift */; };
 		D0041EFA21C19687007EB7DC /* Reg.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0041EF921C19687007EB7DC /* Reg.swift */; };
 		D0076ECA21C38E880063348D /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076EC921C38E880063348D /* menu.swift */; };
+		D0076ECC21C3976B0063348D /* Appbudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076ECB21C3976B0063348D /* Appbudget.swift */; };
+		D0076ECE21C39BF20063348D /* Createlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076ECD21C39BF20063348D /* Createlist.swift */; };
 		FD3CFB7D21C154E80093BC39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CFB7C21C154E80093BC39 /* AppDelegate.swift */; };
 		FD3CFB7F21C154E80093BC39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CFB7E21C154E80093BC39 /* ViewController.swift */; };
 		FD3CFB8221C154E80093BC39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3CFB8021C154E80093BC39 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		D0041EF721C19592007EB7DC /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		D0041EF921C19687007EB7DC /* Reg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reg.swift; sourceTree = "<group>"; };
 		D0076EC921C38E880063348D /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
+		D0076ECB21C3976B0063348D /* Appbudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appbudget.swift; sourceTree = "<group>"; };
+		D0076ECD21C39BF20063348D /* Createlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createlist.swift; sourceTree = "<group>"; };
 		EEC0F2DFE4B1BDBE8825DA39 /* Pods-WeMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeMate/Pods-WeMate.debug.xcconfig"; sourceTree = "<group>"; };
 		FD3CFB7921C154E80093BC39 /* WeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3CFB7C21C154E80093BC39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				D0041EF921C19687007EB7DC /* Reg.swift */,
 				75536D7221C22D7A00B1099C /* GoogleService-Info.plist */,
 				D0076EC921C38E880063348D /* menu.swift */,
+				D0076ECB21C3976B0063348D /* Appbudget.swift */,
+				D0076ECD21C39BF20063348D /* Createlist.swift */,
 			);
 			path = WeMate;
 			sourceTree = "<group>";
@@ -233,9 +239,11 @@
 				9CA1F3BC21C198B6006933FF /* Button.swift in Sources */,
 				D0041EFA21C19687007EB7DC /* Reg.swift in Sources */,
 				D0076ECA21C38E880063348D /* menu.swift in Sources */,
+				D0076ECE21C39BF20063348D /* Createlist.swift in Sources */,
 				D0041EF821C19592007EB7DC /* Login.swift in Sources */,
 				FD3CFB7F21C154E80093BC39 /* ViewController.swift in Sources */,
 				FD3CFB7D21C154E80093BC39 /* AppDelegate.swift in Sources */,
+				D0076ECC21C3976B0063348D /* Appbudget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
