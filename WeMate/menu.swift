@@ -86,8 +86,11 @@ class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         {
             try! Auth.auth().signOut()
             if let storyboard = self.storyboard {
-                let vc = storyboard.instantiateViewController(withIdentifier: "Login") as! Login
-                self.present(vc, animated: false, completion: nil)
+               //
+                let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as?
+                ViewController
+                self.navigationController?.pushViewController(VC!, animated: true)
+                
             }
             
             //let VC = self.storyboard?.instantiateViewController(withIdentifier: "LogOut") as?
