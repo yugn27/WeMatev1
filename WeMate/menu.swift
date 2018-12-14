@@ -59,7 +59,20 @@ class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(VC!, animated: true)
             
         }
-       
+        if(ref == 2)
+        {
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "Viewlist") as?
+            Viewlist
+            self.navigationController?.pushViewController(VC!, animated: true)
+            
+        }
+        if(ref == 3)
+        {
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "Addreminder") as?
+            Addreminder
+            self.navigationController?.pushViewController(VC!, animated: true)
+            
+        }
     }
 
     

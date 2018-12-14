@@ -15,6 +15,8 @@
 		D0076ECA21C38E880063348D /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076EC921C38E880063348D /* menu.swift */; };
 		D0076ECC21C3976B0063348D /* Appbudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076ECB21C3976B0063348D /* Appbudget.swift */; };
 		D0076ECE21C39BF20063348D /* Createlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076ECD21C39BF20063348D /* Createlist.swift */; };
+		D0076ED021C39E660063348D /* Viewlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076ECF21C39E660063348D /* Viewlist.swift */; };
+		D0076ED221C39F300063348D /* Addreminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076ED121C39F300063348D /* Addreminder.swift */; };
 		FD3CFB7D21C154E80093BC39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CFB7C21C154E80093BC39 /* AppDelegate.swift */; };
 		FD3CFB7F21C154E80093BC39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CFB7E21C154E80093BC39 /* ViewController.swift */; };
 		FD3CFB8221C154E80093BC39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3CFB8021C154E80093BC39 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		D0076EC921C38E880063348D /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 		D0076ECB21C3976B0063348D /* Appbudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appbudget.swift; sourceTree = "<group>"; };
 		D0076ECD21C39BF20063348D /* Createlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createlist.swift; sourceTree = "<group>"; };
+		D0076ECF21C39E660063348D /* Viewlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewlist.swift; sourceTree = "<group>"; };
+		D0076ED121C39F300063348D /* Addreminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addreminder.swift; sourceTree = "<group>"; };
 		EEC0F2DFE4B1BDBE8825DA39 /* Pods-WeMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeMate/Pods-WeMate.debug.xcconfig"; sourceTree = "<group>"; };
 		FD3CFB7921C154E80093BC39 /* WeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3CFB7C21C154E80093BC39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				D0076EC921C38E880063348D /* menu.swift */,
 				D0076ECB21C3976B0063348D /* Appbudget.swift */,
 				D0076ECD21C39BF20063348D /* Createlist.swift */,
+				D0076ECF21C39E660063348D /* Viewlist.swift */,
+				D0076ED121C39F300063348D /* Addreminder.swift */,
 			);
 			path = WeMate;
 			sourceTree = "<group>";
@@ -239,7 +245,9 @@
 				9CA1F3BC21C198B6006933FF /* Button.swift in Sources */,
 				D0041EFA21C19687007EB7DC /* Reg.swift in Sources */,
 				D0076ECA21C38E880063348D /* menu.swift in Sources */,
+				D0076ED221C39F300063348D /* Addreminder.swift in Sources */,
 				D0076ECE21C39BF20063348D /* Createlist.swift in Sources */,
+				D0076ED021C39E660063348D /* Viewlist.swift in Sources */,
 				D0041EF821C19592007EB7DC /* Login.swift in Sources */,
 				FD3CFB7F21C154E80093BC39 /* ViewController.swift in Sources */,
 				FD3CFB7D21C154E80093BC39 /* AppDelegate.swift in Sources */,
