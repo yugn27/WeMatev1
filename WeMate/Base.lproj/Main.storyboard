@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2dN-qa-uZN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6yc-kL-2xN">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -155,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uL0-Is-xak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813.125" y="132.04225352112675"/>
+            <point key="canvasLocation" x="2001" y="541"/>
         </scene>
         <!--Reg-->
         <scene sceneID="r5O-Of-QGI">
@@ -243,12 +243,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjs-NX-Ck4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2460" y="129.92957746478874"/>
+            <point key="canvasLocation" x="2691" y="48"/>
         </scene>
         <!--MainScreen-->
         <scene sceneID="p5k-1m-D0c">
             <objects>
-                <viewController title="MainScreen" id="6yc-kL-2xN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menu" title="MainScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6yc-kL-2xN" customClass="menu" customModule="WeMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XAX-5I-2x9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,6 +262,9 @@
                                                 <rect key="frame" x="16" y="11" width="70" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="menuicon"/>
+                                                <connections>
+                                                    <action selector="menubtn:" destination="6yc-kL-2xN" eventType="touchUpInside" id="yFB-KN-JeP"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -278,8 +281,8 @@
                                 <rect key="frame" x="0.0" y="64" width="197" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-CL-wWN">
-                                        <rect key="frame" x="0.0" y="-8" width="204" height="130"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logodemo" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-CL-wWN">
+                                        <rect key="frame" x="0.0" y="0.0" width="204" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vME-Ag-voI">
@@ -287,7 +290,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TX3-ZX-21o">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="TX3-ZX-21o">
                                                 <rect key="frame" x="0.0" y="28" width="204" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TX3-ZX-21o" id="Ztz-dc-hqo">
@@ -296,6 +299,10 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="6yc-kL-2xN" id="1jF-7l-tpp"/>
+                                            <outlet property="delegate" destination="6yc-kL-2xN" id="Q2A-Gr-OUl"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -311,6 +318,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oIP-ir-APt"/>
                     </view>
+                    <connections>
+                        <outlet property="menuview" destination="nTY-pL-X07" id="MXO-lL-FhT"/>
+                        <outlet property="tbview" destination="vME-Ag-voI" id="Gj1-SM-dCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGU-Fu-tPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
