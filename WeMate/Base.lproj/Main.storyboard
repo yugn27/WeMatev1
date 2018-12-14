@@ -168,7 +168,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWi-Hv-AYV">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Reg" id="HF4-n6-4Hx"/>
+                                    <navigationItem title="Registration" id="HF4-n6-4Hx"/>
                                 </items>
                             </navigationBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJj-RE-k1v">
@@ -180,7 +180,7 @@
                                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bR8-p7-5KE">
                                             <rect key="frame" x="96" y="7" width="128" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Reg"/>
+                                            <state key="normal" title="Register"/>
                                             <connections>
                                                 <action selector="reg:" destination="LDE-Ye-7oZ" eventType="touchUpInside" id="ln8-og-TBE"/>
                                             </connections>
