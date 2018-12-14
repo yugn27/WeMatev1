@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var count : Int = 0
@@ -82,9 +84,15 @@ class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         if(ref == 5)
         {
-            let VC = self.storyboard?.instantiateViewController(withIdentifier: "LogOut") as?
-            Addreminder
-            self.navigationController?.pushViewController(VC!, animated: true)
+            try! Auth.auth().signOut()
+            if let storyboard = self.storyboard {
+                let vc = storyboard.instantiateViewController(withIdentifier: "Login") as! Login
+                self.present(vc, animated: false, completion: nil)
+            }
+            
+            //let VC = self.storyboard?.instantiateViewController(withIdentifier: "LogOut") as?
+            //Addreminder
+            //self.navigationController?.pushViewController(VC!, animated: true)
             
         }
     }
