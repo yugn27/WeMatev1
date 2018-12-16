@@ -419,6 +419,7 @@
                             </navigationBar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="535-NL-gvB">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.53333333329999999" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem id="hBX-6j-Eh6">
                                         <nil key="title"/>
