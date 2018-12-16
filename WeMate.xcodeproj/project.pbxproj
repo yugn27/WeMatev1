@@ -22,6 +22,7 @@
 		FD3CFB8221C154E80093BC39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3CFB8021C154E80093BC39 /* Main.storyboard */; };
 		FD3CFB8421C154E90093BC39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3CFB8321C154E90093BC39 /* Assets.xcassets */; };
 		FD3CFB8721C154E90093BC39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3CFB8521C154E90093BC39 /* LaunchScreen.storyboard */; };
+		FD5F2F7521C6D81F007AEB3D /* CreateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2F7421C6D81F007AEB3D /* CreateGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FD3CFB8321C154E90093BC39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD3CFB8621C154E90093BC39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD3CFB8821C154E90093BC39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD5F2F7421C6D81F007AEB3D /* CreateGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				D0076ECD21C39BF20063348D /* Createlist.swift */,
 				D0076ECF21C39E660063348D /* Viewlist.swift */,
 				D0076ED121C39F300063348D /* Addreminder.swift */,
+				FD5F2F7421C6D81F007AEB3D /* CreateGroup.swift */,
 			);
 			path = WeMate;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				D0076ECA21C38E880063348D /* menu.swift in Sources */,
 				D0076ED221C39F300063348D /* Addreminder.swift in Sources */,
 				D0076ECE21C39BF20063348D /* Createlist.swift in Sources */,
+				FD5F2F7521C6D81F007AEB3D /* CreateGroup.swift in Sources */,
 				D0076ED021C39E660063348D /* Viewlist.swift in Sources */,
 				D0041EF821C19592007EB7DC /* Login.swift in Sources */,
 				FD3CFB7F21C154E80093BC39 /* ViewController.swift in Sources */,
