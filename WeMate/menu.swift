@@ -13,7 +13,7 @@ import FirebaseAuth
 class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var count : Int = 0
     var ref: Int = 0
-    let items = ["Add Budget","Create list","View List","Add Reminder","AboutApp","Log Out"]
+    let items = ["Create Group","Add Budget","Create list","View List","Add Reminder","AboutApp","Log Out"]
     @IBOutlet weak var tbview: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -50,39 +50,45 @@ class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if(ref == 0)
         {
-            let VC = self.storyboard?.instantiateViewController(withIdentifier: "Appbudget") as? Appbudget
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "CreateGroup") as? Appbudget
             self.navigationController?.pushViewController(VC!, animated: true)
             
         }
         if(ref == 1)
+        {
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "Appbudget") as? Appbudget
+            self.navigationController?.pushViewController(VC!, animated: true)
+            
+        }
+        if(ref == 2)
         {
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "Createlist") as?
             Createlist
             self.navigationController?.pushViewController(VC!, animated: true)
             
         }
-        if(ref == 2)
+        if(ref == 3)
         {
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "Viewlist") as?
             Viewlist
             self.navigationController?.pushViewController(VC!, animated: true)
             
         }
-        if(ref == 3)
+        if(ref == 4)
         {
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "Addreminder") as?
             Addreminder
             self.navigationController?.pushViewController(VC!, animated: true)
             
         }
-        if(ref == 4)
+        if(ref == 5)
         {
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "AboutApp") as?
             Addreminder
             self.navigationController?.pushViewController(VC!, animated: true)
             
         }
-        if(ref == 5)
+        if(ref == 6)
         {
             try! Auth.auth().signOut()
             if self.storyboard != nil {
