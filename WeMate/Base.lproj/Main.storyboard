@@ -333,6 +333,7 @@
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeS-rl-2az">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.53333333329999999" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem id="LWS-Nu-XRj">
                                         <nil key="title"/>
@@ -429,6 +430,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VVL-oL-EyT">
+                                <rect key="frame" x="16" y="81" width="288" height="433"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.97933279419999997" green="0.97807776489999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -436,15 +441,19 @@
                             <constraint firstItem="535-NL-gvB" firstAttribute="bottom" secondItem="LvI-9C-Mec" secondAttribute="bottom" id="47G-Ph-WxD"/>
                             <constraint firstItem="535-NL-gvB" firstAttribute="leading" secondItem="LvI-9C-Mec" secondAttribute="leading" id="BBq-ZR-ETw"/>
                             <constraint firstItem="27v-KH-EPK" firstAttribute="top" secondItem="LvI-9C-Mec" secondAttribute="top" id="Ddw-al-ZUq"/>
+                            <constraint firstItem="VVL-oL-EyT" firstAttribute="leading" secondItem="LvI-9C-Mec" secondAttribute="leading" constant="16" id="Jd8-NF-gme"/>
+                            <constraint firstItem="LvI-9C-Mec" firstAttribute="trailing" secondItem="VVL-oL-EyT" secondAttribute="trailing" constant="16" id="Qy3-T9-hmB"/>
                             <constraint firstItem="27v-KH-EPK" firstAttribute="leading" secondItem="LvI-9C-Mec" secondAttribute="leading" id="fSk-8H-Tya"/>
+                            <constraint firstItem="VVL-oL-EyT" firstAttribute="top" secondItem="27v-KH-EPK" secondAttribute="bottom" constant="17" id="gLt-bh-rha"/>
                             <constraint firstItem="27v-KH-EPK" firstAttribute="trailing" secondItem="LvI-9C-Mec" secondAttribute="trailing" id="jAT-uD-ef3"/>
+                            <constraint firstItem="535-NL-gvB" firstAttribute="top" secondItem="VVL-oL-EyT" secondAttribute="bottom" constant="10" id="yFS-jY-GWH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LvI-9C-Mec"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruX-Jn-n54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5318" y="-489"/>
+            <point key="canvasLocation" x="5317.5" y="-489.08450704225351"/>
         </scene>
         <!--MainScreen-->
         <scene sceneID="p5k-1m-D0c">
@@ -677,7 +686,7 @@
         <image name="traplogodemo" width="803" height="803"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VgS-TC-jpL"/>
+        <segue reference="7LQ-rL-GjR"/>
         <segue reference="t5t-tH-R6K"/>
         <segue reference="AEp-fp-bVf"/>
     </inferredMetricsTieBreakers>
