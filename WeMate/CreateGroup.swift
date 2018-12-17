@@ -22,6 +22,14 @@ class CreateGroup: UIViewController {
     var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
+        
+        //FirebaseApp.configure()
+        ref =  Database.database().reference()
+        
 
         
     }
@@ -30,7 +38,7 @@ class CreateGroup: UIViewController {
         nomembers = Int(numberofmembersoutlet.text!) ?? 0
         if(counter < nomembers)
         {
-            self.ref.child("Your Group").setValue(["Member" : nameofmemberoutlet.text!] )
+            self.ref.child("Your Group").setValue(["Member\(counter)" : nameofmemberoutlet.text!] )
             counter = counter+1
             clear()
             if(counter == nomembers)
