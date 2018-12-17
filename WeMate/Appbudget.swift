@@ -10,16 +10,40 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class Appbudget: UIViewController {
+class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     //outlets
+    //text fields
+    @IBOutlet weak var BudgetNameOutlet: UITextField!
+    @IBOutlet weak var PaidByOutlet: UITextField!
+    @IBOutlet weak var DateOutlet: UITextField!
+    @IBOutlet weak var AmountOutlet: UITextField!
+    // tableview
+    @IBOutlet weak var tableshowoutlet: UITableView!
+    
     // Database  reference firebase
     var ref : DatabaseReference!
     var handle : DatabaseHandle!
     
+    let items = ["Umang Lotiya","Vishitosh Kapale","Vaibhav Jaiswal","Yash Nayak"]
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = items[indexPath.row]
+        return(cell)
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableshowoutlet.tableFooterView = UIView()
         
         if FirebaseApp.app() == nil {
             FirebaseApp.configure()
@@ -62,9 +86,19 @@ class Appbudget: UIViewController {
             print(name)
         })
         
+        
+        
+        
     }
     
+    
    
+    @IBAction func AddBtn(_ sender: Any) {
+        //datebase storing
+        self.ref.child(BudgetNameOutlet.text!).child("Budget").setValue(["Budget Name":BudgetNameOutlet.text,"Paid By":PaidByOutlet.text,"Date":DateOutlet.text,"Amount":AmountOutlet.text])
+        myalert("Sucesss", "Budget Added Sucessfully")
+        print("sucessffully")
+    }
     
    
 
@@ -77,5 +111,14 @@ class Appbudget: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func myalert(_ mytitle:String, _ mymessage:String)
+    {
+        let alert = UIAlertController(title: mytitle, message: mymessage, preferredStyle: .actionSheet)
+        let ok = UIAlertAction(title: "Done", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert,animated: true,completion: nil)
+    }
 
 }

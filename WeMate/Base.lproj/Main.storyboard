@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2dN-qa-uZN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iqh-NY-t1U">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -341,6 +341,9 @@
                                             <rect key="frame" x="96" y="7" width="128" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Add"/>
+                                            <connections>
+                                                <action selector="AddBtn:" destination="Iqh-NY-t1U" eventType="touchUpInside" id="Kdo-wa-IBD"/>
+                                            </connections>
                                         </button>
                                     </navigationItem>
                                 </items>
@@ -358,6 +361,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Iqh-NY-t1U" id="sgj-NI-aeT"/>
+                                    <outlet property="delegate" destination="Iqh-NY-t1U" id="T0z-ZB-srr"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.97933279419999997" green="0.97807776489999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -387,6 +394,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S39-Wc-sH5"/>
                     </view>
+                    <connections>
+                        <outlet property="AmountOutlet" destination="goP-V2-J89" id="HUL-OY-rwM"/>
+                        <outlet property="BudgetNameOutlet" destination="Hqc-tG-lyU" id="gIP-oA-QmU"/>
+                        <outlet property="DateOutlet" destination="YzY-Ud-3hz" id="H6A-Yd-ZQx"/>
+                        <outlet property="PaidByOutlet" destination="gUn-C3-Wcg" id="UiI-Lu-zL1"/>
+                        <outlet property="tableshowoutlet" destination="daS-q1-5jH" id="agy-Td-lyc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="In5-TY-OzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -772,7 +786,7 @@
         <image name="traplogodemo" width="803" height="803"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WXj-iu-fDs"/>
+        <segue reference="VgS-TC-jpL"/>
         <segue reference="fD4-xl-AeH"/>
         <segue reference="6sl-qX-RF3"/>
     </inferredMetricsTieBreakers>
