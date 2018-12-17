@@ -50,7 +50,7 @@ class menu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if(ref == 0)
         {
-            let VC = self.storyboard?.instantiateViewController(withIdentifier: "CreateGroup") as? Appbudget
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "CreateGroup") as? CreateGroup
             self.navigationController?.pushViewController(VC!, animated: true)
             
         }

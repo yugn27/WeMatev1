@@ -7,16 +7,44 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+
 
 class CreateGroup: UIViewController {
 
+    @IBOutlet weak var nameofmemberoutlet: UITextField!
+    @IBOutlet weak var numberofmembersoutlet: UITextField!
+   
+    var nomembers: Int = 0
+    var counter: Int = 0
+    var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
+    @IBAction func addmember(_ sender: UIButton) {
+        nomembers = Int(numberofmembersoutlet.text!) ?? 0
+        if(counter < nomembers)
+        {
+            self.ref.child("Your Group").setValue(["Member" : nameofmemberoutlet.text!] )
+            counter = counter+1
+            clear()
+            if(counter == nomembers)
+            {
+                myalert("Sucess", "All Members are added")
+            }
+            myalert("Member Added Sucessfully", "Add another member")
+        }
+        if(counter >= nomembers)
+        {
+             myalert("Limit Exceeded", "All members are added")
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -26,5 +54,39 @@ class CreateGroup: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    @IBAction func creategroup(_ sender: UIButton) {
+        if(counter<nomembers)
+        {
+            myalert("Error", "All Members are not added in group")
+            
+        }
+        else
+        {
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "menu") as?
+            menu
+            self.navigationController?.pushViewController(VC!, animated: true)
+            myalert("Sucess", "Group Created Sucessfully")
+            clear()
+            
+        }
+        
+        
+    }
+    
+    func myalert(_ mytitle:String, _ mymessage:String)
+    {
+        let alert = UIAlertController(title: mytitle, message: mymessage, preferredStyle: .actionSheet)
+        let ok = UIAlertAction(title: "Done", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert,animated: true,completion: nil)
+    }
+    func clear()
+    {
+        nameofmemberoutlet.text = ""
+       
+        
+        
+    }
 
 }
