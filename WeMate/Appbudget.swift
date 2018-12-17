@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class Appbudget: UIViewController {
 
+    //outlets
     // Database  reference firebase
     var ref : DatabaseReference!
     var handle : DatabaseHandle!
