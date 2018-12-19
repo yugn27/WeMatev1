@@ -9,4 +9,6 @@ target 'WeMate' do
 	pod 'Firebase/Core'
   pod 'Firebase/Database'
 pod 'FirebaseAuth'
+pod 'FirebaseUI/Database'
+pod 'Alamofire'
 end

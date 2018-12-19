@@ -10,7 +10,8 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource{
+
+class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //outlets
     //text fields
@@ -25,19 +26,43 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var ref : DatabaseReference!
     var handle : DatabaseHandle!
     
-    let items = ["Umang Lotiya","Vishitosh Kapale","Vaibhav Jaiswal","Yash Nayak"]
+    //let items = ["Umang Lotiya","Vishitosh Kapale","Vaibhav Jaiswal","Yash Nayak"]
+    var items = ["No Items"]
+    
+    //func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //    return items.count
+    //}
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return posts.count
     }
+    
+    //func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //    let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+    //    cell.textLabel?.text = items[indexPath.row]
+     //   return(cell)
+    //}
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = items[indexPath.row]
-        return(cell)
         
+        let post = posts[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PostCell {
+            cell.configureCell(post: post)
+            return cell
+        } else {
+            return PostCell()
+        }
     }
+    
+    //post
+    var posts = [Post]()
     
     
     override func viewDidLoad() {
@@ -48,6 +73,9 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if FirebaseApp.app() == nil {
             FirebaseApp.configure()
         }
+        
+        // create record
+        ref = Database.database().reference()
         
         //FirebaseApp.configure()
         //ref =  Database.database().reference()
@@ -74,22 +102,36 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource{
             
             
         */
-            
-        // create record
-        ref = Database.database().reference()
         
         
-        
+        /*
         //read data from firebase
-        handle = ref.child("umang").ref.child("Registration").observe(.childAdded, with: { (data) in
+        handle = ref.child("GROUP").child("Registration").observe(.childAdded, with: { (data) in
             let name : String = (data.value as? String)!
             print(name)
+            self.items = [name]
         })
+        */
         
         
-        
-        
+        DatabaseManager.shared.REF_POSTS.observe(DataEventType.value, with: { (snapshot) in
+            print(snapshot.value!)
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+                    if let postDict = snap.value as? [String: AnyObject] {
+                        let id = snap.key
+                        let post = Post(postID: id, postData: postDict)
+                        print(post)
+                        self.posts.append(post)
+                    }
+                }
+            }
+            self.tableshowoutlet.reloadData()
+        })
     }
+    
+    
+    
     
     
    

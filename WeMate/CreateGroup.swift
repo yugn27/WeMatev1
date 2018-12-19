@@ -38,7 +38,7 @@ class CreateGroup: UIViewController {
         nomembers = Int(numberofmembersoutlet.text!) ?? 0
         if(counter < nomembers)
         {
-            self.ref.child("Your Group1").child("\(counter)").setValue(["Member\(counter)" : nameofmemberoutlet.text!])
+            self.ref.child("Your Group1").child("\(counter)").updateChildValues(["Member\(counter)" : nameofmemberoutlet.text!])
             //self.ref.child("users").child(Personnr.text!).setValue(data)
             counter = counter+1
             clear()
