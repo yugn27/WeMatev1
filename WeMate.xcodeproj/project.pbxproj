@@ -17,6 +17,8 @@
 		D0076ECE21C39BF20063348D /* Createlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076ECD21C39BF20063348D /* Createlist.swift */; };
 		D0076ED021C39E660063348D /* Viewlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076ECF21C39E660063348D /* Viewlist.swift */; };
 		D0076ED221C39F300063348D /* Addreminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0076ED121C39F300063348D /* Addreminder.swift */; };
+		FD02E4BF21CB94DB00C64696 /* Unicorn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD02E4BE21CB94DB00C64696 /* Unicorn.swift */; };
+		FD02E4C121CB95B000C64696 /* UnicornTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD02E4C021CB95B000C64696 /* UnicornTableViewCell.swift */; };
 		FD33885521C8F28600CFA7E2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD33885421C8F28600CFA7E2 /* DatabaseManager.swift */; };
 		FD33885721C8F2AF00CFA7E2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD33885621C8F2AF00CFA7E2 /* Post.swift */; };
 		FD33885921C8F3CE00CFA7E2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD33885821C8F3CE00CFA7E2 /* PostCell.swift */; };
@@ -41,6 +43,8 @@
 		D0076ECF21C39E660063348D /* Viewlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewlist.swift; sourceTree = "<group>"; };
 		D0076ED121C39F300063348D /* Addreminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addreminder.swift; sourceTree = "<group>"; };
 		EEC0F2DFE4B1BDBE8825DA39 /* Pods-WeMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeMate/Pods-WeMate.debug.xcconfig"; sourceTree = "<group>"; };
+		FD02E4BE21CB94DB00C64696 /* Unicorn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unicorn.swift; sourceTree = "<group>"; };
+		FD02E4C021CB95B000C64696 /* UnicornTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicornTableViewCell.swift; sourceTree = "<group>"; };
 		FD33885421C8F28600CFA7E2 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		FD33885621C8F2AF00CFA7E2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FD33885821C8F3CE00CFA7E2 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				FD3CFB8021C154E80093BC39 /* Main.storyboard */,
 				FD3CFB8321C154E90093BC39 /* Assets.xcassets */,
 				FD3CFB8521C154E90093BC39 /* LaunchScreen.storyboard */,
+				FD02E4C021CB95B000C64696 /* UnicornTableViewCell.swift */,
 				FD3CFB8821C154E90093BC39 /* Info.plist */,
 				D0041EF721C19592007EB7DC /* Login.swift */,
 				D0041EF921C19687007EB7DC /* Reg.swift */,
@@ -123,6 +128,7 @@
 				FD33885421C8F28600CFA7E2 /* DatabaseManager.swift */,
 				FD33885621C8F2AF00CFA7E2 /* Post.swift */,
 				FD33885821C8F3CE00CFA7E2 /* PostCell.swift */,
+				FD02E4BE21CB94DB00C64696 /* Unicorn.swift */,
 			);
 			path = WeMate;
 			sourceTree = "<group>";
@@ -257,10 +263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CA1F3BC21C198B6006933FF /* Button.swift in Sources */,
+				FD02E4BF21CB94DB00C64696 /* Unicorn.swift in Sources */,
 				D0041EFA21C19687007EB7DC /* Reg.swift in Sources */,
 				D0076ECA21C38E880063348D /* menu.swift in Sources */,
 				D0076ED221C39F300063348D /* Addreminder.swift in Sources */,
 				FD33885721C8F2AF00CFA7E2 /* Post.swift in Sources */,
+				FD02E4C121CB95B000C64696 /* UnicornTableViewCell.swift in Sources */,
 				D0076ECE21C39BF20063348D /* Createlist.swift in Sources */,
 				FD5F2F7521C6D81F007AEB3D /* CreateGroup.swift in Sources */,
 				FD33885921C8F3CE00CFA7E2 /* PostCell.swift in Sources */,

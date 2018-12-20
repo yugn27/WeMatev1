@@ -34,6 +34,13 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //}
     
     
+    var unicorns = [Unicorn]() {
+        didSet {
+            tableshowoutlet.reloadData()
+        }
+    }
+    
+    /*
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -41,6 +48,7 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
+ */
     
     //func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     //    let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
@@ -48,7 +56,7 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
      //   return(cell)
     //}
     
-    
+    /*
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let post = posts[indexPath.row]
@@ -63,6 +71,8 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //post
     var posts = [Post]()
+ 
+ */
     
     
     override func viewDidLoad() {
@@ -76,6 +86,9 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // create record
         ref = Database.database().reference()
+        
+        tableshowoutlet.tableFooterView = UIView()
+
         
         //FirebaseApp.configure()
         //ref =  Database.database().reference()
@@ -114,7 +127,8 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
         */
         
         
-        DatabaseManager.shared.REF_POSTS.observe(DataEventType.value, with: { (snapshot) in
+       /*
+ DatabaseManager.shared.REF_POSTS.observe(DataEventType.value, with: { (snapshot) in
             print(snapshot.value!)
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
@@ -128,8 +142,22 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             self.tableshowoutlet.reloadData()
         })
+ 
+ */
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ref.child("unicorns").observe(.value) { snapshot in
+            var unicorns = [Unicorn]()
+            for unicornSnapshot in snapshot.children {
+                let unicorn = Unicorn(snapshot: unicornSnapshot as! DataSnapshot)
+                unicorns.append(unicorn)
+            }
+            self.unicorns = unicorns
+        }
+    }
     
     
     
@@ -164,3 +192,23 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
 }
+
+
+
+// MARK: - Table view data source
+extension Appbudget {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return unicorns.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "unicornTableViewCell", for: indexPath) as! UnicornTableViewCell
+        cell.unicorn = unicorns[indexPath.row]
+        return cell
+    }
+}
+
