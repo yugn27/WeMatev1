@@ -447,7 +447,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27v-KH-EPK">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="View List" id="7wB-Wh-LYp">
+                                    <navigationItem title="View Expences" id="7wB-Wh-LYp">
                                         <barButtonItem key="leftBarButtonItem" id="nJs-Rc-Gyp">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gFn-Ci-WZe">
                                                 <rect key="frame" x="16" y="7" width="46" height="30"/>
@@ -693,7 +693,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDq-0f-n9n">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Create List" id="MWR-mV-de5">
+                                    <navigationItem title="ToDo List" id="MWR-mV-de5">
                                         <barButtonItem key="leftBarButtonItem" id="ytC-lz-ePw">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lBT-Co-MVm">
                                                 <rect key="frame" x="16" y="7" width="34" height="30"/>
@@ -816,7 +816,7 @@
         <image name="traplogodemo" width="803" height="803"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VgS-TC-jpL"/>
+        <segue reference="7LQ-rL-GjR"/>
         <segue reference="fD4-xl-AeH"/>
         <segue reference="6sl-qX-RF3"/>
     </inferredMetricsTieBreakers>
