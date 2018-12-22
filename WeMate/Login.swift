@@ -33,6 +33,8 @@ class Login: UIViewController {
                 self.myalert("Failed", "Incorrect Email ID or Password")
             }
         }
+        
+       
          self.clear()
     }
     override func viewDidLoad() {
