@@ -293,7 +293,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWm-mO-le1">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Add Budget " id="0Mc-Kq-fpz">
+                                    <navigationItem title="Add Expences" id="0Mc-Kq-fpz">
                                         <barButtonItem key="leftBarButtonItem" id="hz0-ep-IEn">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ien-E1-6X2">
                                                 <rect key="frame" x="16" y="7" width="46" height="30"/>
@@ -479,15 +479,49 @@
                                 <rect key="frame" x="16" y="81" width="288" height="433"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="X7N-ds-Iga">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="unicornTableViewCell" id="X7N-ds-Iga" customClass="UnicornTableViewCell" customModule="WeMate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X7N-ds-Iga" id="rKz-NC-gqj">
                                             <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0N-cD-c9k">
+                                                    <rect key="frame" x="30" y="11.5" width="136" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="136" id="5Ja-oX-1xu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-VE-oG4">
+                                                    <rect key="frame" x="205" y="11.5" width="60" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="esI-kX-XSV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ftd-VE-oG4" secondAttribute="trailing" constant="8" id="0ou-eB-ygm"/>
+                                                <constraint firstItem="b0N-cD-c9k" firstAttribute="centerY" secondItem="rKz-NC-gqj" secondAttribute="centerY" id="Z4n-JB-xOx"/>
+                                                <constraint firstItem="b0N-cD-c9k" firstAttribute="leading" secondItem="rKz-NC-gqj" secondAttribute="leadingMargin" constant="15" id="pdt-PS-8UN"/>
+                                                <constraint firstItem="ftd-VE-oG4" firstAttribute="centerY" secondItem="rKz-NC-gqj" secondAttribute="centerY" id="z9v-gl-XAp"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addedBy" destination="b0N-cD-c9k" id="num-JY-ZZi"/>
+                                            <outlet property="seenAt" destination="ftd-VE-oG4" id="br8-Rh-xhF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="U6Z-Nc-tyr" id="aYf-fz-vD2"/>
+                                    <outlet property="delegate" destination="U6Z-Nc-tyr" id="yic-Jy-Mys"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.97933279419999997" green="0.97807776489999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -505,6 +539,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LvI-9C-Mec"/>
                     </view>
+                    <connections>
+                        <outlet property="tableviewview" destination="VVL-oL-EyT" id="BXt-cH-QGK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruX-Jn-n54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,6 +565,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Back"/>
                                             </button>
+                                            <connections>
+                                                <segue destination="6yc-kL-2xN" kind="push" id="bgk-Xy-ZbL"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -568,7 +608,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97933279419999997" green="0.97807776489999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="5Ue-m7-sKB" firstAttribute="trailing" secondItem="0i4-DI-jQi" secondAttribute="trailing" constant="16" id="OnN-eF-aoo"/>
                             <constraint firstItem="HdA-yV-eFL" firstAttribute="top" secondItem="yqI-Fk-CB0" secondAttribute="bottom" constant="16" id="Rhh-At-bei"/>
@@ -827,7 +867,7 @@
         <image name="traplogodemo" width="803" height="803"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VgS-TC-jpL"/>
+        <segue reference="bgk-Xy-ZbL"/>
         <segue reference="fD4-xl-AeH"/>
         <segue reference="6sl-qX-RF3"/>
     </inferredMetricsTieBreakers>
