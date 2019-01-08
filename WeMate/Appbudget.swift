@@ -165,7 +165,7 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     @IBAction func AddBtn(_ sender: Any) {
         //datebase storing
-        self.ref.child(BudgetNameOutlet.text!).child("Budget").setValue(["Budget Name":BudgetNameOutlet.text,"Paid By":PaidByOutlet.text,"Date":DateOutlet.text,"Amount":AmountOutlet.text])
+        self.ref.child("unicorns").child(BudgetNameOutlet.text!).setValue(["Budget Name":BudgetNameOutlet.text,"Paid By":PaidByOutlet.text,"Date":DateOutlet.text,"Amount":AmountOutlet.text])
         myalert("Sucesss", "Budget Added Sucessfully")
         print("sucessffully")
     }

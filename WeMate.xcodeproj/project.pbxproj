@@ -28,6 +28,9 @@
 		FD3CFB8421C154E90093BC39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3CFB8321C154E90093BC39 /* Assets.xcassets */; };
 		FD3CFB8721C154E90093BC39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3CFB8521C154E90093BC39 /* LaunchScreen.storyboard */; };
 		FD5F2F7521C6D81F007AEB3D /* CreateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F2F7421C6D81F007AEB3D /* CreateGroup.swift */; };
+		FDBC3DCF21DE0004008A5CCD /* CreateGroup2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBC3DCE21DE0004008A5CCD /* CreateGroup2ViewController.swift */; };
+		FDBC3DD121DE005C008A5CCD /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBC3DD021DE005C008A5CCD /* ArtistModel.swift */; };
+		FDBC3DD321DE012E008A5CCD /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBC3DD221DE012E008A5CCD /* ViewControllerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		FD3CFB8621C154E90093BC39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD3CFB8821C154E90093BC39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD5F2F7421C6D81F007AEB3D /* CreateGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroup.swift; sourceTree = "<group>"; };
+		FDBC3DCE21DE0004008A5CCD /* CreateGroup2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroup2ViewController.swift; sourceTree = "<group>"; };
+		FDBC3DD021DE005C008A5CCD /* ArtistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
+		FDBC3DD221DE012E008A5CCD /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 				D0041EF921C19687007EB7DC /* Reg.swift */,
 				75536D7221C22D7A00B1099C /* GoogleService-Info.plist */,
 				D0076EC921C38E880063348D /* menu.swift */,
+				FDBC3DD021DE005C008A5CCD /* ArtistModel.swift */,
 				D0076ECB21C3976B0063348D /* Appbudget.swift */,
 				D0076ECD21C39BF20063348D /* Createlist.swift */,
 				D0076ECF21C39E660063348D /* Viewlist.swift */,
@@ -129,6 +136,8 @@
 				FD33885621C8F2AF00CFA7E2 /* Post.swift */,
 				FD33885821C8F3CE00CFA7E2 /* PostCell.swift */,
 				FD02E4BE21CB94DB00C64696 /* Unicorn.swift */,
+				FDBC3DCE21DE0004008A5CCD /* CreateGroup2ViewController.swift */,
+				FDBC3DD221DE012E008A5CCD /* ViewControllerTableViewCell.swift */,
 			);
 			path = WeMate;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 				FD02E4BF21CB94DB00C64696 /* Unicorn.swift in Sources */,
 				D0041EFA21C19687007EB7DC /* Reg.swift in Sources */,
 				D0076ECA21C38E880063348D /* menu.swift in Sources */,
+				FDBC3DD121DE005C008A5CCD /* ArtistModel.swift in Sources */,
 				D0076ED221C39F300063348D /* Addreminder.swift in Sources */,
 				FD33885721C8F2AF00CFA7E2 /* Post.swift in Sources */,
 				FD02E4C121CB95B000C64696 /* UnicornTableViewCell.swift in Sources */,
@@ -277,6 +287,8 @@
 				FD33885521C8F28600CFA7E2 /* DatabaseManager.swift in Sources */,
 				FD3CFB7F21C154E80093BC39 /* ViewController.swift in Sources */,
 				FD3CFB7D21C154E80093BC39 /* AppDelegate.swift in Sources */,
+				FDBC3DCF21DE0004008A5CCD /* CreateGroup2ViewController.swift in Sources */,
+				FDBC3DD321DE012E008A5CCD /* ViewControllerTableViewCell.swift in Sources */,
 				D0076ECC21C3976B0063348D /* Appbudget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
