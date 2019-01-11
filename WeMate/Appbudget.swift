@@ -162,7 +162,6 @@ class Appbudget: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     
-   
     @IBAction func AddBtn(_ sender: Any) {
         //datebase storing
         self.ref.child("unicorns").child(BudgetNameOutlet.text!).setValue(["Budget Name":BudgetNameOutlet.text,"Paid By":PaidByOutlet.text,"Date":DateOutlet.text,"Amount":AmountOutlet.text])

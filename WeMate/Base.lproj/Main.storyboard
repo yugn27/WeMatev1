@@ -683,7 +683,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTY-pL-X07">
                                 <rect key="frame" x="0.0" y="65" width="249" height="503"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logodemo" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-CL-wWN">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeMate Emblem" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-CL-wWN">
                                         <rect key="frame" x="0.0" y="0.0" width="249" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="249" id="gEQ-Ye-8aC"/>
@@ -988,6 +988,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="WeMate Emblem" width="242" height="233"/>
         <image name="logodemo" width="770.8800048828125" height="770.8800048828125"/>
         <image name="menuicon" width="16" height="12"/>
         <image name="traplogodemo" width="803" height="803"/>

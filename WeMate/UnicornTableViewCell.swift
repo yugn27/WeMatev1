@@ -29,7 +29,9 @@ class UnicornTableViewCell: UITableViewCell {
             }
         }
     }
-/*
+    
+    
+  /*
     func downloadImage(from storageImagePath: String) {
         // 1. Get a filePath to save the image at
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -54,7 +56,9 @@ class UnicornTableViewCell: UITableViewCell {
     }
 
  
- */
+  */
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
       //  storageRef = Storage.storage().reference()
@@ -62,9 +66,13 @@ class UnicornTableViewCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-       // storageDownloadTask.cancel()
+       //storageDownloadTask.cancel()
         //unicornImageView.image = #imageLiteral(resourceName: "unicorn")
         addedBy.text = "Added by"
         seenAt.text = "Seen at"
+        //seenAt = "Seen at"
+        let number:String = "\(seenAt)"
+        print(number)
+        
     }
 }

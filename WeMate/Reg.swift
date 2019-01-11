@@ -64,16 +64,13 @@ class Reg: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        
-    //        let regView = self.storyboard?.instantiateViewController(withIdentifier: "Training") as? Training
-      //      self.navigationController?.pushViewController(regView!, animated: true)
-      
-            
-        
+        //        let regView = self.storyboard?.instantiateViewController(withIdentifier: "Training") as? Training
+        //      self.navigationController?.pushViewController(regView!, animated: true)
         // Do any additional setup after loading the view.
     }
     
-        func clear()
+    
+    func clear()
         {
             nametxt.text=""
             usernametxt.text=""
